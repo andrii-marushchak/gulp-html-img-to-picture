@@ -277,7 +277,7 @@ To ignore an image from being converted to `picture` you have to add `data-ignor
 also can be adjusted with these parameters
 
 ```js
-[ignoreClassname](#ignoreClassname), [ignoreAttribute](#ignoreAttribute)
+ignoreClassname, ignoreAttribute
 ```
 
 ```html

@@ -1,6 +1,6 @@
 {
   "name": "gulp-html-img-to-picture",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Gulp plugin to wrap tag <img> with <picture> adding <source> including .avif and .webp and sort sources inside <picture> by size",
   "main": "index.js",
   "scripts": {
