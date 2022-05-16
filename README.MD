@@ -2,7 +2,7 @@
 
 > Gulp plugin to wrap tag `<img>` with `<picture>` adding `<source>`  including .avif and .webp and sort sources inside `<picture>` by size
 
-## The Idea of Package
+## The Idea of Plugin
 
 > I checked all popular packages that wrapping `<img>` with `<picture>` and combined them all in one with extra options & parameters like: sorting by size, adding custom image extenstions, ignoring certain image(s)
 
@@ -51,7 +51,7 @@ function html() {
 exports.html = html;
 ```
 
-Use this into your `gulpfile.js` with ES6 module syntax:
+with modern ES6 module syntax:
 
 ```js
 import gulp from "gulp"
@@ -219,6 +219,7 @@ An array of image extensions which will be existes as `<source>` inside `<pictur
 You can adjust their order in case if [sortBySize](#sortBySize) is set to false.
 
 ## Examples
+
 ```html
 // Input
 <img src="img/test.jpg" alt="image"> 
@@ -252,7 +253,7 @@ To ignore an image from being converted to `picture` you have to add `data-ignor
 also can be adjusted with these parameters
 
 ```js
-ignoreClassname, ignoreAttribute
+[ignoreClassname](#ignoreClassname), [ignoreAttribute](#ignoreAttribute)
 ```
 
 ```html
