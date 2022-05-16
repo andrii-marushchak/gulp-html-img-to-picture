@@ -139,12 +139,16 @@ Default: `['.jpg', '.jpeg', '.png']`
 
 Pass an array of image extensions you want to wrap with `<picture>`
 
+---
+
 #### ignoreClassname
 
 Type: `string`<br>
 Default: `'img-ignore'`
 
 The images with this class name won't be wrapped with `<picture>`
+
+---
 
 #### ignoreAttribute
 
