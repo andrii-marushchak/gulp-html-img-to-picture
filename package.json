@@ -1,7 +1,7 @@
 {
   "name": "gulp-html-img-to-picture",
   "version": "1.0.1",
-  "description": "Gulp plugin to replace html element <img> to <picture>, including .avif and .webp and sort sources inside <picture> by size",
+  "description": "Gulp plugin to wrap tag <img> with <picture> adding <source> including .avif and .webp and sort sources inside <picture> by size",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

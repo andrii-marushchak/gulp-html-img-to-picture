@@ -33,8 +33,17 @@ module.exports = function (customParameters) {
                 sortBySize: true,
                 ignoreScripts: true,
                 ignoreComments: true,
-                avif: true,
-                webp: true,
+                filterUnexistedImages: true,
+                sourceExtensions: [
+                    {
+                        extension: 'avif',
+                        mimetype: 'image/avif',
+                    },
+                    {
+                        extension: 'webp',
+                        mimetype: 'image/webp',
+                    },
+                ],
                 ...customParameters
             };
 
@@ -122,10 +131,6 @@ module.exports = function (customParameters) {
                                 return item !== parameters.ignoreClassname
                             })
                             image = image.replace(matches[0], ` class="${classesArray.join(' ')}"`);
-
-                            return image
-                        } else {
-                            return image
                         }
                     }
 
@@ -135,10 +140,7 @@ module.exports = function (customParameters) {
 
                         // Remove attribute data-ignore
                         image = image.replace(parameters.ignoreAttribute, '');
-                        return image
                     }
-
-                    console.log(PICTURE_CLASS_REGEX.test(image));
 
                     // Remove attribute data-picture-class if image should be ignored
                     if ((hasIgnoreClass || hasIgnoreAttribute) &&
@@ -181,28 +183,20 @@ module.exports = function (customParameters) {
                             },
                         ]
 
-                        if (parameters.webp) {
-                            imagesArray.unshift(
-                                {
-                                    name: 'webp',
-                                    html: `<source srcset="${srcValueWithoutExt}.webp" type="image/webp">`,
-                                    size: getFileSize(`${parameters.imgFolder}${srcValueWithoutExt}.webp`)
-                                }
-                            )
-                        }
-
-                        if (parameters.avif) {
-                            imagesArray.unshift(
-                                {
-                                    name: 'avif',
-                                    html: `<source srcset="${srcValueWithoutExt}.avif" type="image/avif">`,
-                                    size: getFileSize(`${parameters.imgFolder}${srcValueWithoutExt}.avif`)
-                                }
-                            )
+                        if (parameters.sourceExtensions) {
+                            parameters.sourceExtensions.forEach((imgElement) => {
+                                imagesArray.unshift(
+                                    {
+                                        name: imgElement.extension,
+                                        html: `<source srcset="${srcValueWithoutExt}.${imgElement.extension}" type="${imgElement.mimetype}">`,
+                                        size: getFileSize(`${parameters.imgFolder}${srcValueWithoutExt}.${imgElement.extension}`)
+                                    }
+                                )
+                            })
                         }
 
                         // Filter Images
-                        if (parameters.imgFolder) {
+                        if (parameters.imgFolder && parameters.filterUnexistedImages) {
                             imagesArray = imagesArray.filter(function (img) {
                                 if (img.name !== 'original' && img.size === 0) {
                                     // Remove unexisted img
@@ -236,7 +230,7 @@ module.exports = function (customParameters) {
 
                     // Ignored Images Counter
                     if (hasIgnoreAttribute || hasIgnoreClass) {
-                        imagesIgnored += 1;
+                        imagesIgnored++;
                     }
 
                     return image;
