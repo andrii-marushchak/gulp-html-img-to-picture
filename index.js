@@ -109,8 +109,9 @@ module.exports = function (customParameters) {
                 `{{ ${pluginName}__insert-image }}`
             );
 
+            newHtmlString = tempHtmlString
+
             if (images) {
-                newHtmlString = tempHtmlString;
 
                 const newImages = images.map((image) => {
                     // Flags
