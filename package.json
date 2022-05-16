@@ -1,0 +1,37 @@
+{
+  "name": "gulp-html-img-to-picture",
+  "version": "1.0.1",
+  "description": "Gulp plugin to replace html element <img> to <picture>, including .avif and .webp and sort sources inside <picture> by size",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrii-marushchak/gulp-html-img-to-picture.git"
+  },
+  "keywords": [
+    "avif",
+    "webp",
+    "gulp webp",
+    "gulp avif",
+    "source",
+    "picture",
+    "img-to-picture",
+    "type-avif",
+    "type-webp",
+    "html-tag-picture"
+  ],
+  "author": "andrii-marushchak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrii-marushchak/gulp-html-img-to-picture/issues"
+  },
+  "homepage": "https://github.com/andrii-marushchak/gulp-html-img-to-picture#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "gulp-util": "^3.0.8",
+    "path": "^0.12.7",
+    "through2": "^4.0.2"
+  }
+}
