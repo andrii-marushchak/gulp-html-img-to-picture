@@ -21,10 +21,10 @@ A list of packages that inspired me. You can check them out if you need more sim
 - Ignore `<img>` inside HTML Comments
 - Ignore `<img>` inside `<script></script>` that inlined into html
 - Ignore existing `<picture>` tags
-- Option to add a class for the `<picture>` tag after building the project using a special attribute `<img data-picture-class="picture-wrapper">` in the source code
+- Option to add a class for the `<picture>` tag after building the project using a special attribute <br>`<img data-picture-class="picture-wrapper">` in the source code
 - Option to sort sources inside `<picture>` by their size to force browser download the smallest one
 - Option to remove `<sources>` with incorrect or unexisted `src` attribute
-- Possibility not to wrap certain image(s) with special attribute or class name `<img data-ignore class="img-ignore" src="" alt="">`
+- Possibility not to wrap certain image(s) with special attribute or class name <Br>`<img data-ignore class="img-ignore" src="" alt="">`
 
 ## Install
 
@@ -51,7 +51,7 @@ function html() {
 exports.html = html;
 ```
 
-with modern ES6 module syntax:
+with modern ES6 modules syntax:
 
 ```js
 import gulp from "gulp"
@@ -68,7 +68,7 @@ const html = () => {
 exports.html = html;
 ```
 
-Recommended to use with [`gulp-plumber`](https://www.npmjs.com/package/gulp-plumber):
+Recommended to use with <a target="_blank" href="https://www.npmjs.com/package/gulp-plumber">`gulp-plumber`</a> :
 
 ```js
 import gulp from "gulp"
