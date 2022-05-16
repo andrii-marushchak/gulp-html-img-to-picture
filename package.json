@@ -1,6 +1,6 @@
 {
   "name": "gulp-html-img-to-picture",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Gulp plugin to wrap tag <img> with <picture> adding <source> including .avif and .webp and sort sources inside <picture> by size",
   "main": "index.js",
   "scripts": {
@@ -11,16 +11,23 @@
     "url": "git+https://github.com/andrii-marushchak/gulp-html-img-to-picture.git"
   },
   "keywords": [
+    "gulp-webp-html",
+    "gulp-avif-html",
+    "img-to-picture",
     "avif",
     "webp",
     "gulp webp",
+    "gulp-webp",
+    "webphtml",
+    "avifhtml",
     "gulp avif",
     "source",
     "picture",
-    "img-to-picture",
     "type-avif",
     "type-webp",
-    "html-tag-picture"
+    "html-tag-picture",
+    "gulp",
+    "gulpplugin"
   ],
   "author": "andrii-marushchak",
   "license": "MIT",

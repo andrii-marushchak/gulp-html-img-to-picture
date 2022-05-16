@@ -123,6 +123,8 @@ imgToPicture({
 
 ## Options
 
+---
+
 #### imgFolder
 
 Type: `string`<br>
@@ -131,6 +133,8 @@ Default: `false` <Br>
 Pass an relative path to build folder where images are located. <br>
 It's required only parameter in case you want to use sorting by image size <br>
 In my [Gulp Boilerplate](https://github.com/andrii-marushchak/Gulp-4-Webpack-Boilerplate) it's `'./dist'`
+
+---
 
 #### extensions
 
@@ -157,12 +161,16 @@ Default: `'data-ignore'`
 
 The images with this attribute won't be wrapped with `<picture>`
 
+---
+
 #### pictureClassAttribute
 
 Type: `string`<br>
 Default: `'data-picture-class'`
 
 The attribute for adding CSS class name to `<picture>` that img will be wrapped with
+
+---
 
 #### logger
 
@@ -172,6 +180,8 @@ Default: `true`
 If true, you will see the count of converted & ignored images in console <br>
 ![logger](https://i.imgur.com/VzsYmIC.png)
 
+---
+
 #### [sortBySize](#Sorting)
 
 Type: `boolean`<br>
@@ -180,12 +190,16 @@ Default: `true`
 If true, `<img>` and `<source>` in the `<picture>` will be sorted by their size <br>
 > [`imgFolder`](#imgFolder) parameter is required for this option
 
+---
+
 #### ignoreScripts
 
 Type: `boolean`<br>
 Default: `true`
 
 If true,  `<img>` inside `<script></script>` will be ignored
+
+---
 
 #### ignoreComments
 
@@ -194,12 +208,16 @@ Default: `true`
 
 If true,  `<img>` inside HTML comments will be ignored
 
+---
+
 #### filterUnexistedImages
 
 Type: `boolean`<br>
 Default: `true`
 
 If true, plugin will check sources path. `<sources>` with incorrect or unexisted `src` attribute will be removed from `<picture>`
+
+---
 
 #### sourceExtensions
 
@@ -222,6 +240,7 @@ Default:
 An array of image extensions which will be existes as `<source>` inside `<picture>`. <br>
 You can adjust their order in case if [sortBySize](#sortBySize) is set to false.
 
+
 ## Examples
 
 ```html
@@ -237,6 +256,7 @@ You can adjust their order in case if [sortBySize](#sortBySize) is set to false.
     <img src="img/test.jpg" alt="image"><!-- 1.3 KB -->
 </picture>
 ```
+
 
 ## Sorting
 
