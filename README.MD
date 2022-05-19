@@ -1,3 +1,5 @@
+[![alt text](https://i.imgur.com/0zKVcuh.jpg)](https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi)
+
 # gulp-html-img-to-picture
 
 > Gulp plugin to wrap tag `<img>` with `<picture>` adding `<source>`  including .avif and .webp and sort sources inside `<picture>` by size
